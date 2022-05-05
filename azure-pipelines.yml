@@ -1,0 +1,73 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+variables:
+  pathToProject: '**/*.csproj'
+
+stages:
+- stage: Build
+  displayName: Build Stage (Api - Prd)
+
+  jobs:
+  - job: Build
+    displayName: Build (Api - Prd)
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore das dependencias'
+      inputs:
+        command: 'restore'
+        projects: $(pathToProject)
+        feedsToUse: 'select'
+    - task: DotNetCoreCLI@2
+      displayName: 'Compilar aplicação'
+      inputs:
+        command: 'build'
+        projects: '$(pathToProject)'
+    - task: DotNetCoreCLI@2
+      displayName: 'Gerar Artefatos'
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
+        projects: '$(pathToProject)'
+        arguments: '--configuration Release --output $(Build.ArtifactStagingDirectory)'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Salvar pacote'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'   
+- stage: Deploy
+  displayName: Deploy Stage (Api - Prd)
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+    - job: Deploy
+      displayName: 'Deploy em Produção'
+      pool:
+        vmImage: ubuntu-latest
+      steps:
+      - task: DownloadBuildArtifacts@1
+        displayName: 'Baixando Atefatos'
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'drop'
+          downloadPath: '$(System.ArtifactsDirectory)'
+      - task: AzureRmWebAppDeployment@4
+        displayName: 'Publicando no Azure'
+        inputs:
+          ConnectionType: 'AzureRM'
+          azureSubscription: 'pipeline-service-connection'
+          appType: 'webAppLinux'
+          WebAppName: 'ms-lidia-freitas-usuario-contratante'
+          ResourceGroupName: 'projeto-integrador-prd'
+          packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+
+  
