@@ -4,4 +4,4 @@ Microserviço de Usuário Contratante desenvolvido para projeto integrador Facul
 
 Endpoint microserviço: https://ms-lidia-freitas-usuario-contratante.azurewebsites.net/api/usuario-contratante
 
-Collection do Postman está na raíz do projeto.
+Para realizar as requisições, deve importar a collection na ferramenta Postman que se encontra no diretório de mesmo nome.
