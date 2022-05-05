@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "guYv4ei0c3D3hlZx8bJhO0LrEXB3PjJ/L+FvYeJfAvB5GndvashCUSUYJHJspgBr6D9eACbJC7D//9SdYfwl8g==",
+  "dgSpecHash": "hoekMZEJZWZuHDs19JRs1EX8BcPhyNyp1X2XeZF7CGCvjjrAQ02vueKM1Yhul1KUv8joDcJ2k8sxwWR6+t5J3A==",
   "success": true,
-  "projectFilePath": "C:\\git\\projeto-integrador\\projeto-integrador\\projeto-integrador.csproj",
+  "projectFilePath": "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\projeto-integrador.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guilh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.applicationinsights\\2.18.0\\microsoft.applicationinsights.2.18.0.nupkg.sha512",

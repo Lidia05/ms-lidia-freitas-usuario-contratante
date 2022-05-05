@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\projeto-integrador\\projeto-integrador\\projeto-integrador.csproj": {}
+    "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\projeto-integrador.csproj": {}
   },
   "projects": {
-    "C:\\git\\projeto-integrador\\projeto-integrador\\projeto-integrador.csproj": {
+    "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\projeto-integrador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\projeto-integrador\\projeto-integrador\\projeto-integrador.csproj",
+        "projectUniqueName": "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\projeto-integrador.csproj",
         "projectName": "projeto-integrador",
-        "projectPath": "C:\\git\\projeto-integrador\\projeto-integrador\\projeto-integrador.csproj",
+        "projectPath": "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\projeto-integrador.csproj",
         "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\projeto-integrador\\projeto-integrador\\obj\\",
+        "outputPath": "C:\\git\\ms-lidia-freitas-usuario-contratante\\projeto-integrador\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
