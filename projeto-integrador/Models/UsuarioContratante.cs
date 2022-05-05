@@ -22,18 +22,25 @@ namespace projeto_integrador.Models
         public Guid Id { get; private set; }
 
         [Required]
+        [MaxLength(500)]
         public string Nome { get; private set; }
         [Required]
+        [MaxLength(500)]
         public string Email { get; private set; }
         [Required]
+        [MaxLength(500)]
         public string NomeEmpresa { get; private set; }
         [Required]
+        [MaxLength(500)]
         public string EnderecoEmpresa { get; private set; }
         [Required]
+        [MaxLength(500)]
         public string UrlFotoEmpresa { get; private set; }
         [Required]
+        [MaxLength(500)]
         public string DescricaoEmpresa { get; private set; }
         [Required]
+        [MaxLength(100)]
         public string NumeroContato { get; private set; }
 
 
